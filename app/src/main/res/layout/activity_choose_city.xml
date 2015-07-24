@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity">
+
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_choose_city_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:left_bg="@drawable/common_bg_top_back"
+        app:left_layout_enable="true"
+        app:title_enable="true"
+        app:title_text="@string/choose_city"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:padding="10dp">
+
+        <com.fxft.cheyoufuwu.common.view.CommonSearchLayout
+            android:id="@+id/csl_city_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/choose_city_search_layout_bg"
+            android:padding="@dimen/padding_10dp"
+            app:cancel_image="@drawable/home_cancel"
+            app:edit_text_hint="@string/input_city_name"
+            app:edit_text_hint_color="@color/light_gray"
+            app:edit_text_size="@dimen/small_text_size"
+            app:left_image="@drawable/search_bar_icon_normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_current_location_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_gray_line"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_10dp"
+                android:text="福州"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS定位"
+                android:textColor="@color/light_red" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/location_layout_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_current_location_city"
+            android:background="@color/light_gray" />
+
+        <ListView
+            android:id="@+id/lv_city_list"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_layout_divider" />
+
+        <com.fxft.cheyoufuwu.common.view.SideBar
+            android:id="@+id/sb_list_locate_bar"
+            android:layout_below="@id/ll_current_location_city"
+            android:background="@color/home_gray_line"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            app:defualt_background="@color/home_gray_line"
+            app:pressed_background="@drawable/sidebar_background"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_location_first_spell"
+            android:layout_centerInParent="true"
+            android:background="@color/light_gray"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

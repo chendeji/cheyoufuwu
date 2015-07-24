@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableRight="@drawable/arrow_down"
+        android:textColor="@color/white"
+        android:text="福州"
+        android:gravity="center"
+        android:textSize="@dimen/default_text_size" />
+
+</merge>

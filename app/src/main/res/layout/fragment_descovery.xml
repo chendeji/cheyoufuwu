@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.descovery.fragment.DescoveryFragment">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_descovery_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:left_layout_enable="true"
+        app:left_custom_layout="@layout/descovery_top_bar_left_custom_layout"
+        app:right_first_layout_enable="true"
+        app:right_bg1="@drawable/discover_xiala"
+        app:title_enable="true"
+        app:title_text="@string/decovery"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size"
+        android:background="@drawable/top_bar_white_bg"/>
+
+    <ListView
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/lv_decovery_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

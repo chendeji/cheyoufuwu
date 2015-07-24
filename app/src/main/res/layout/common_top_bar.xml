@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_left_image_holder"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_right_button_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_right_image1_holder"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/rl_right_image2_holder"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/rl_right_image3_holder"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_middle_layout_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_toLeftOf="@id/ll_right_button_holder"
+        android:layout_toRightOf="@id/rl_left_image_holder"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</merge>

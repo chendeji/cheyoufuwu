@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_car_business"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_clean_car"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_color="@color/gray_text"
+            app:menu_detail_text_size="@dimen/middle_menu_sub_title_size"
+            app:menu_item_detail="@string/clean_car_detail"
+            app:menu_item_title="@string/clean_car"
+            app:menu_title_text_size="@dimen/middle_menu_title_size"
+            app:menu_top_drawable="@drawable/ic_launcher" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_car_refuel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_color="@color/gray_text"
+            app:menu_detail_text_size="@dimen/middle_menu_sub_title_size"
+            app:menu_item_detail="@string/car_refuel_detail"
+            app:menu_item_title="@string/refuel"
+            app:menu_title_text_size="@dimen/middle_menu_title_size"
+            app:menu_top_drawable="@drawable/ic_launcher" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_car_maintain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_color="@color/gray_text"
+            app:menu_detail_text_size="@dimen/middle_menu_sub_title_size"
+            app:menu_item_detail="@string/maintain_detail"
+            app:menu_item_title="@string/maintain"
+            app:menu_title_text_size="@dimen/middle_menu_title_size"
+            app:menu_top_drawable="@drawable/ic_launcher" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_car_sos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_color="@color/gray_text"
+            app:menu_detail_text_size="@dimen/middle_menu_sub_title_size"
+            app:menu_item_detail="@string/sos_detail"
+            app:menu_item_title="@string/car_sos"
+            app:menu_title_text_size="@dimen/middle_menu_title_size"
+            app:menu_top_drawable="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_car_network_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_illegal_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_enable="false"
+            app:menu_item_title="@string/illegal_query"
+            app:menu_title_text_size="@dimen/middle_menu_title_size" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_integral_exchange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_enable="false"
+            app:menu_item_title="@string/integral_exchange"
+            app:menu_title_text_size="@dimen/middle_menu_title_size" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_black_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_enable="false"
+            app:menu_item_title="@string/black_box"
+            app:menu_title_text_size="@dimen/middle_menu_title_size" />
+
+        <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
+            android:id="@+id/menu_binding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:menu_detail_text_enable="false"
+            app:menu_item_title="@string/binding"
+            app:menu_title_text_size="@dimen/middle_menu_title_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

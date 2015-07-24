@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.mall.fragment.MallFragment">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:left_layout_enable="false"
+        app:right_first_layout_enable="false"
+        app:right_sec_layout_enable="false"
+        app:right_thir_layout_enable="false"
+        app:title_enable="true"
+        app:title_text="@string/car_business_mall"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size"
+        android:background="@drawable/top_bar_white_bg"/>
+
+    <ListView
+        android:id="@+id/lv_mall_merchandise_list"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+
+</LinearLayout>

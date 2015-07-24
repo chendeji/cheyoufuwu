@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">车友服务</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_merchant">寻找商家、商品</string>
+    <string name="home_page">首页</string>
+    <string name="mall">商城</string>
+    <string name="decovery">发现</string>
+    <string name="mine">我的</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clean_car">洗车</string>
+    <string name="clean_car_detail">洗车优惠5元起</string>
+    <string name="car_refuel_detail">加油98折</string>
+    <string name="refuel">加油</string>
+    <string name="maintain">维护保养</string>
+    <string name="maintain_detail">全国5-8折</string>
+    <string name="sos_detail">45分钟到达</string>
+    <string name="car_sos">全国救援</string>
+    <string name="illegal_query">查违章</string>
+    <string name="integral_exchange">积分兑换</string>
+    <string name="black_box">黑匣子</string>
+    <string name="binding">绑定激活</string>
+    <string name="nearby_merchant">附近商家</string>
+    <string name="favourite">猜你喜欢</string>
+    <string name="car_business_mall">车友商城</string>
+    <string name="recommend_merchandise">推荐商品</string>
+    <string name="esoterica">秘籍</string>
+    <string name="my_consumption_volume">我的消费卷</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_car">我的车辆</string>
+    <string name="my_bunding">激活绑定</string>
+    <string name="call_service">联系客服</string>
+    <string name="choose_picture_from_gallery">相册提取</string>
+    <string name="take_picture">手机拍照</string>
+    <string name="cancle">取消</string>
+    <string name="title_activity_choose_city">ChooseCityActivity</string>
+    <string name="choose_city">城市选择</string>
+    <string name="input_city_name">输入城市名或者首字母查询</string>
+</resources>

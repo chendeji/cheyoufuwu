@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/nearby_merchant" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <com.fxft.cheyoufuwu.common.view.SlideShowView
+        android:id="@+id/ssv_home_nearby_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+
+</LinearLayout>

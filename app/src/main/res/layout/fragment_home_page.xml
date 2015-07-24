@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView
+        android:id="@+id/sv_homePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.fxft.cheyoufuwu.common.view.SlideShowView
+                android:id="@+id/ssv_top_ad"
+                android:layout_width="match_parent"
+                app:auto_scroll_enable="true"
+                android:layout_height="@dimen/flexible_space_image_height"/>
+
+            <include layout="@layout/home_middle_manu_layout" />
+
+            <include layout="@layout/home_pop_active_layout"/>
+
+            <include layout="@layout/home_nearby_merchant_layout"/>
+
+            <include layout="@layout/home_favourite_layout"/>
+
+        </LinearLayout>
+
+    </com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal" />
+
+        <com.fxft.cheyoufuwu.common.view.CommonTopBar
+            android:id="@+id/ctb_homepage_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:left_custom_layout="@layout/city_name_layout"
+            app:left_layout_enable="true"
+            app:middle_custom_layout="@layout/top_bar_search_layout"
+            app:middle_custom_layout_enable="true"
+            app:right_bg1="@drawable/icon_msg"
+            app:right_first_layout_enable="true"
+            app:title_enable="false" />
+
+    </FrameLayout>
+
+
+</FrameLayout>

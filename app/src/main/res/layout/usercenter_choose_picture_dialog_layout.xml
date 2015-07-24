@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/shape_common_button_normal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="@dimen/huge_text_size"
+        android:text="选择图片"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_choose_picture_from_gallary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:textColor="@color/common_button_textcolor"
+        android:text="@string/choose_picture_from_gallery"
+        android:textSize="@dimen/default_text_size"
+        android:layout_marginBottom="5dp"
+        />
+    <Button
+        android:id="@+id/bt_choose_picture_camera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/common_button_textcolor"
+        android:text="@string/take_picture"
+        android:textSize="@dimen/default_text_size"
+        />
+    <Button
+        android:id="@+id/bt_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:textColor="@color/common_button_textcolor"
+        android:text="@string/cancle"
+        android:textSize="@dimen/default_text_size"
+        />
+
+
+</LinearLayout>

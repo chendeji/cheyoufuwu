@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.userCenter.fragment.UserCenterFragment">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_usercenter_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/top_bar_white_bg"
+        app:left_bg="@drawable/setting_icon"
+        app:left_layout_enable="true"
+        app:title_enable="true"
+        app:title_text="@string/mine"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size" />
+
+    <com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView
+        android:id="@+id/sv_usercenter_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/usercenter_userinfo_layout" />
+
+            <include layout="@layout/usercenter_user_detailinfo_layout" />
+
+        </LinearLayout>
+
+    </com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView>
+
+</LinearLayout>

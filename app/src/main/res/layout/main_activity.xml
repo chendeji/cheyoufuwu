@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_homepage"
+            android:checked="true"
+            style="@style/RadioButton_TABHOST"
+            android:drawableTop="@drawable/tab_home_page_bg"
+            android:text="@string/home_page" />
+
+        <RadioButton
+            android:id="@+id/rb_mall"
+            style="@style/RadioButton_TABHOST"
+            android:drawableTop="@drawable/tab_leigou_bg"
+            android:text="@string/mall" />
+
+        <RadioButton
+            android:id="@+id/rb_descovery"
+            style="@style/RadioButton_TABHOST"
+            android:drawableTop="@drawable/tab_descovery_bg"
+            android:text="@string/decovery" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/RadioButton_TABHOST"
+            android:drawableTop="@drawable/tab_my_bg"
+            android:text="@string/mine" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_bar"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tab_bar"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/home_gray_line" />
+
+        <com.fxft.cheyoufuwu.common.view.CursorView
+            android:id="@+id/cv_indecator"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            app:cursor_count="4"
+            android:background="@color/light_red"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
