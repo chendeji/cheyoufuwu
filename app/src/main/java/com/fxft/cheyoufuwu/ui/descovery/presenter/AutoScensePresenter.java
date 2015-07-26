@@ -83,6 +83,7 @@ public class AutoScensePresenter implements IActivity {
     @Override
     public void onDestory() {
         BusProvider.getInstance().unregister(this);
+        mView.clear();
         mView = null;
     }
 }

@@ -73,6 +73,7 @@ public class MallPresenter implements IActivity{
     @Override
     public void onDestory() {
         BusProvider.getInstance().unregister(this);
+        mMallView.clear();
         mMallView = null;
     }
 }

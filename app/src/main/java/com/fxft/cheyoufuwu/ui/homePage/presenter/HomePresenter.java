@@ -94,6 +94,7 @@ public class HomePresenter implements IActivity{
 
     @Override
     public void onDestory() {
+        mHomeView.clear();
         mHomeView = null;
         BusProvider.getInstance().unregister(this);
     }

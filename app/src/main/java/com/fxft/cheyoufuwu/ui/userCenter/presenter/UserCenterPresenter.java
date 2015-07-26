@@ -33,6 +33,7 @@ public class UserCenterPresenter implements IActivity {
     @Override
     public void onDestory() {
         BusProvider.getInstance().unregister(this);
+        userCenterView.clear();
         userCenterView = null;
     }
 

@@ -16,9 +16,6 @@ import com.fxft.cheyoufuwu.common.view.SideBar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * 选择城市
- */
 public class ChooseCityActivity extends AppCompatActivity {
 
     @Bind(R.id.ctb_choose_city_top_bar)
