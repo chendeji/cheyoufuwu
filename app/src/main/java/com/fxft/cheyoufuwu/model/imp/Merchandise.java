@@ -4,6 +4,7 @@ import com.fxft.cheyoufuwu.common.util.StringFormatUtil;
 import com.fxft.cheyoufuwu.model.iinterface.IMerchandise;
 
 /**
+ * 商品类
  * Created by ChenDJ on 2015/7/22.<br>
  */
 public class Merchandise implements IMerchandise {

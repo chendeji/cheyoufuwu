@@ -18,6 +18,7 @@ public class CityPresenter implements IActivity{
 
     public void getCity(String city){
         //TODO 从数据库获取城市数据
+
     }
 
     @Override

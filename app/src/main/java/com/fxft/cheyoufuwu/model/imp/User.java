@@ -1,11 +1,12 @@
 package com.fxft.cheyoufuwu.model.imp;
 
+import com.fxft.cheyoufuwu.database.EntityBase;
 import com.fxft.cheyoufuwu.model.iinterface.IUser;
 
 /**
  * Created by ChenDJ on 2015/7/24.<br>
  */
-public class User implements IUser {
+public class User extends EntityBase implements IUser {
 
     private String headImageUrl;
     private String nickName;
