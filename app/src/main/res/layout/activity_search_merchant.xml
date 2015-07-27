@@ -34,7 +34,7 @@
         android:padding="@dimen/padding_10dp">
 
         <RadioButton
-            android:id="@+id/bt_merchant"
+            android:id="@+id/rb_merchant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/horizontal_check_button_bg"
@@ -49,7 +49,7 @@
             android:textSize="@dimen/default_text_size" />
 
         <RadioButton
-            android:id="@+id/bt_merchandise"
+            android:id="@+id/rb_merchandise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/horizontal_check_button_bg"

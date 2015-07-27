@@ -47,4 +47,9 @@
     <string name="merchant">商家</string>
     <string name="merchandise">商品</string>
     <string name="clear_search_record">清空搜索记录</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="message">消息</string>
+    <string name="clear">清空</string>
+    <string name="empty">抱歉，没有找到相关数据</string>
+    <string name="no_message">亲，暂无消息哦</string>
 </resources>

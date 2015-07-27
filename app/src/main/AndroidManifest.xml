@@ -46,6 +46,10 @@
             android:name=".ui.homePage.activity.SearchMerchantActivity"
             android:label="@string/title_activity_search_merchant" >
         </activity>
+        <activity
+            android:name=".ui.homePage.activity.MessageActivity"
+            android:label="@string/title_activity_message" >
+        </activity>
     </application>
 
 </manifest>

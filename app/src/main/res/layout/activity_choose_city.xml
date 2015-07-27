@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity">
 
-
     <com.fxft.cheyoufuwu.common.view.CommonTopBar
         android:id="@+id/ctb_choose_city_top_bar"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         app:title_text="@string/choose_city"
         app:title_text_color="@color/black"
         app:title_text_size="@dimen/middle_text_size" />
-
 
     <LinearLayout
         android:id="@+id/ll_search_layout"
@@ -75,31 +73,31 @@
 
         <ListView
             android:id="@+id/lv_city_list"
-            android:overScrollMode="never"
-            android:scrollbars="none"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/location_layout_divider" />
+            android:layout_below="@id/location_layout_divider"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
 
         <com.fxft.cheyoufuwu.common.view.SideBar
             android:id="@+id/sb_list_locate_bar"
-            android:layout_below="@id/ll_current_location_city"
-            android:background="@color/home_gray_line"
             android:layout_width="25dp"
             android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_current_location_city"
+            android:background="@color/home_gray_line"
             app:defualt_background="@color/home_gray_line"
-            app:pressed_background="@drawable/sidebar_background"
-            android:layout_alignParentRight="true" />
+            app:pressed_background="@drawable/sidebar_background" />
 
         <TextView
             android:id="@+id/tv_location_first_spell"
-            android:layout_centerInParent="true"
-            android:background="@color/light_gray"
-            android:textSize="50sp"
-            android:gravity="center"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:visibility="invisible"/>
+            android:layout_centerInParent="true"
+            android:background="@color/light_gray"
+            android:gravity="center"
+            android:textSize="50sp"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
