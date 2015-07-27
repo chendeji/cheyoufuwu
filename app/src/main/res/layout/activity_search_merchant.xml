@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.SearchMerchantActivity">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_search_merchant_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:middle_custom_layout="@layout/common_search_view"
+        app:middle_custom_layout_enable="true"
+        app:right_first_layout="@layout/common_cancle_button"
+        app:right_first_layout_enable="true" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ctb_search_merchant_bar"
+        android:background="@color/home_gray_line" />
+
+    <RadioGroup
+        android:id="@+id/rg_check_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10dp">
+
+        <RadioButton
+            android:id="@+id/bt_merchant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/horizontal_check_button_bg"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:text="@string/merchant"
+            android:textColor="@drawable/horizontal_check_button_text_color_pressed"
+            android:textSize="@dimen/default_text_size" />
+
+        <RadioButton
+            android:id="@+id/bt_merchandise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/horizontal_check_button_bg"
+            android:button="@null"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:text="@string/merchandise"
+            android:textColor="@drawable/horizontal_check_button_text_color_pressed"
+            android:textSize="@dimen/default_text_size" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_clear_record_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_clear_search_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/search_merchant_bottom_clear_record_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/clear_search_record" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_clear_record_holder"
+        android:orientation="vertical"
+        android:layout_below="@id/rg_check_group"></LinearLayout>
+
+
+</RelativeLayout>

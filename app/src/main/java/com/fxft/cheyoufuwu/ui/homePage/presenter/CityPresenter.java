@@ -3,11 +3,10 @@ package com.fxft.cheyoufuwu.ui.homePage.presenter;
 import android.content.Context;
 
 import com.fxft.cheyoufuwu.common.interfase.IActivity;
-import com.fxft.cheyoufuwu.common.util.ToastUtil;
 import com.fxft.cheyoufuwu.model.iinterface.ICity;
 import com.fxft.cheyoufuwu.ui.common.iinterface.UITaskCallBack;
 import com.fxft.cheyoufuwu.ui.common.model.ReturnMes;
-import com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.task.ChooseCityTask;
+import com.fxft.cheyoufuwu.ui.homePage.task.ChooseCityTask;
 import com.fxft.cheyoufuwu.ui.homePage.iView.ICityView;
 
 import java.lang.ref.WeakReference;

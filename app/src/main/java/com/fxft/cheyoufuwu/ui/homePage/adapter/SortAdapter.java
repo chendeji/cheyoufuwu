@@ -1,4 +1,4 @@
-package com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.adapter;
+package com.fxft.cheyoufuwu.ui.homePage.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

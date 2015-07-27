@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.ChooseCityActivity">
+    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity">
 
 
     <com.fxft.cheyoufuwu.common.view.CommonTopBar
@@ -36,7 +36,7 @@
             app:cancel_image="@drawable/home_cancel"
             app:edit_text_hint="@string/input_city_name"
             app:edit_text_hint_color="@color/light_gray"
-            app:edit_text_size="@dimen/small_text_size"
+            app:edit_text_size="@dimen/min_text_size"
             app:left_image="@drawable/search_bar_icon_normal" />
     </LinearLayout>
 
