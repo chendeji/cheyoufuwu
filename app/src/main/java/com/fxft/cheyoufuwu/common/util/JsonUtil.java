@@ -6,15 +6,19 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
  * Created by ChenDJ on 2015/7/24.<br>
  */
 public class JsonUtil {
+
+    private static final int READ_BUFFER = 1024;
 
     /**
      * 读取文件中的json字符串
@@ -34,6 +38,31 @@ public class JsonUtil {
             json = builder.toString();
         }
         return json;
+    }
+
+    /**
+     * 读取db.json数据库配置文本
+     * <br>Created 2014年8月7日 下午5:52:14
+     * @param in 文件数据流
+     * @return 配置文件内容的json字符串
+     * @author       chenDJ
+     */
+    public static String readJsonFile(InputStream in){
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        byte[] data = new byte[READ_BUFFER];
+        int count = -1;
+        try {
+            while((count = in.read(data,0,READ_BUFFER)) != -1) {
+                output.write(data, 0, count);
+            }
+            in.close();
+//			Log.e(getClass().getSimpleName(), "数据库结构内容："+ new String(output.toByteArray(), "UTF-8"));
+            String result = new String(output.toByteArray(), "UTF-8");
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     /**

@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.homePage.activity.ChooseCityActivity"
+            android:name=".ui.homePage.activity.choose_city.ChooseCityActivity"
             android:label="@string/title_activity_choose_city" >
         </activity>
     </application>

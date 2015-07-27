@@ -18,7 +18,7 @@ import com.fxft.cheyoufuwu.common.view.SlideShowView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollViewCallbacks;
 import com.fxft.cheyoufuwu.common.view.scrollview.ScrollState;
-import com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.ChooseCityActivity;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.NearByMerchantAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.TopADPagerAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.iView.IHomeView;
@@ -209,13 +209,13 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
 
     @Override
     public void onResume() {
+        super.onResume();
         //获取顶部的广告
         presenter.getADUrls();
         //获取附近商户数据
         presenter.getNearByMerchantDate();
         //获取猜你喜欢数据
         presenter.getFavouriteMerchant();
-        super.onResume();
     }
 
     @Override
@@ -238,13 +238,13 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
     @Override
     public void onDetach() {
         mListener = null;
-        recyclePresenter();
-        recycleAdapter();
         super.onDetach();
     }
 
     @Override
     public void onDestroyView() {
+        recyclePresenter();
+        recycleAdapter();
         ButterKnife.unbind(this);
         super.onDestroyView();
     }

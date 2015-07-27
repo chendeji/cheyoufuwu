@@ -1,42 +1,24 @@
 package com.fxft.cheyoufuwu.ui;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.ViewTreeObserver;
-import android.view.Window;
 import android.view.animation.Animation;
-import android.view.animation.OvershootInterpolator;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
 import com.fxft.cheyoufuwu.R;
 import com.fxft.cheyoufuwu.common.util.AnimationUtil;
 import com.fxft.cheyoufuwu.common.util.BusProvider;
-import com.fxft.cheyoufuwu.common.util.SystemUtil;
 import com.fxft.cheyoufuwu.common.util.ToastUtil;
 import com.fxft.cheyoufuwu.common.view.CursorView;
 import com.fxft.cheyoufuwu.ui.descovery.fragment.DescoveryFragment;
 import com.fxft.cheyoufuwu.ui.homePage.fragment.HomePageFragment;
 import com.fxft.cheyoufuwu.ui.mall.fragment.MallFragment;
-import com.fxft.cheyoufuwu.ui.userCenter.event.OnUserHeadImageChangeEvent;
 import com.fxft.cheyoufuwu.ui.userCenter.fragment.UserCenterFragment;
-
-import java.io.File;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -56,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Fragment lastShowFragment;  //上一次显示的fragment
     private Fragment currentShowFragment; //当前需要显示的fragment
+    private boolean isBackClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,9 +121,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            goback();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void goback() {
+        if (isBackClicked){
+            android.os.Process.killProcess(android.os.Process.myPid());
+        } else {
+            isBackClicked = true;
+            ToastUtil.showShortToast(this, getResources().getString(R.string.exit));
+        }
+    }
 
     @Override
     protected void onDestroy() {
+        Log.i(this.getClass().getSimpleName(), "onDestroy");
         ButterKnife.unbind(this);
         BusProvider.getInstance().unregister(this);
         super.onDestroy();

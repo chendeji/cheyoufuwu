@@ -1,25 +1,16 @@
 package com.fxft.cheyoufuwu.ui.homePage.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
-import com.fxft.cheyoufuwu.common.interfase.IActivity;
 import com.fxft.cheyoufuwu.common.util.BusProvider;
-import com.fxft.cheyoufuwu.ui.common.BasePagerAdapter;
+import com.fxft.cheyoufuwu.ui.common.adapter.BasePagerAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.event.OnAdDataChangeEvent;
 import com.squareup.otto.Subscribe;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by chendj on 2015/7/20.

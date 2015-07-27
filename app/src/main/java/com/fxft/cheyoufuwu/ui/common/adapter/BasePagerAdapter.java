@@ -1,4 +1,4 @@
-package com.fxft.cheyoufuwu.ui.common;
+package com.fxft.cheyoufuwu.ui.common.adapter;
 
 import android.content.Context;
 import android.content.res.Resources;

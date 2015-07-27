@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.fxft.cheyoufuwu.common.interfase.IActivity;
 import com.fxft.cheyoufuwu.common.util.BusProvider;
-import com.fxft.cheyoufuwu.ui.common.BasePagerAdapter;
+import com.fxft.cheyoufuwu.ui.common.adapter.BasePagerAdapter;
 import com.fxft.cheyoufuwu.ui.descovery.event.OnAutoSenseTopAdDataChangeEvent;
 import com.squareup.otto.Subscribe;
 

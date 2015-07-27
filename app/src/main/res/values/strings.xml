@@ -40,4 +40,7 @@
     <string name="title_activity_choose_city">ChooseCityActivity</string>
     <string name="choose_city">城市选择</string>
     <string name="input_city_name">输入城市名或者首字母查询</string>
+    <string name="time_out">服务器超时</string>
+    <string name="data_search_result_nothing">数据库中没有该项数据</string>
+    <string name="exit">再按一次退出程序</string>
 </resources>
