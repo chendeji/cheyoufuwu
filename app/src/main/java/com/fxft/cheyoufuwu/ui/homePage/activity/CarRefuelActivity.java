@@ -65,14 +65,13 @@ public class CarRefuelActivity extends AppCompatActivity {
         llAddRebate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(CarRefuelActivity.this, BindingRefuelCardActiivty.class);
+                startActivity(intent);
             }
         });
         tvMoreRefuelStation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CarRefuelActivity.this, BindingRefuelCardActiivty.class);
-                startActivity(intent);
             }
         });
     }

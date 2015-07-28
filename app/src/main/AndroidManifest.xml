@@ -58,6 +58,10 @@
             android:name=".ui.homePage.activity.BindingRefuelCardActiivty"
             android:label="@string/title_activity_binding_refuel_card" >
         </activity>
+        <activity
+            android:name=".ui.homePage.activity.BindingInfoActivity"
+            android:label="@string/title_activity_binding_info" >
+        </activity>
     </application>
 
 </manifest>

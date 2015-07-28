@@ -90,4 +90,12 @@
     <string name="nomore_refuel_station_nearly">附近暂无加油站</string>
     <string name="title_activity_binding_refuel_card">BindingRefuelCard</string>
     <string name="binding_refuel_card">绑定加油卡</string>
+    <string name="company">企业</string>
+    <string name="personal">个人</string>
+    <string name="binding_detail">个人实名认证：可开具个人抬头充值发票、凭身份证挂失。\n \n 企业实名制认证：可开具企业抬头充值发票；填写营业执照编号后可挂失。如暂不确定营业执照编号可以不填，后续向车友服务客服提出补填申请。\n\n认证信息填写后不可修改</string>
+    <string name="title_activity_binding_info">BindingInfoActivity</string>
+    <string name="input_refuel_card_number">请输入油卡号码</string>
+    <string name="real_name_authentication">实名认证信息</string>
+    <string name="input_IDCard_name">请输入身份证姓名</string>
+    <string name="input_IDCard_number">请输入身份证号码</string>
 </resources>
