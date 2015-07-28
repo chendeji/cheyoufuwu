@@ -18,7 +18,9 @@ import com.fxft.cheyoufuwu.common.view.SlideShowView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollViewCallbacks;
 import com.fxft.cheyoufuwu.common.view.scrollview.ScrollState;
-import com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.ChooseCityActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.MessageActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.SearchMerchantActivity;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.NearByMerchantAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.TopADPagerAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.iView.IHomeView;
@@ -151,25 +153,20 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
         mHomepageTopBar.setOnTitleButtonClickListener(new CommonTopBar.OnTitleButtonClickListener() {
             @Override
             public void onTitleButtonCallback(View view, int buttonPos) {
+                Intent intent = null;
                 switch (buttonPos) {
                     case CommonTopBar.OnTitleButtonClickListener.LEFT_CLICK:    //顶部工具栏的左侧按钮点击事件
                         //跳到城市选择界面
-                        Intent intent = new Intent(getActivity(), ChooseCityActivity.class);
-                        getActivity().startActivity(intent);
+                        intent = new Intent(getActivity(), ChooseCityActivity.class);
                         break;
                     case CommonTopBar.OnTitleButtonClickListener.MIDDLE_CLICK:  //顶部中部自定义布局点击事件
-                        ToastUtil.showShortToast(getActivity(), "MIDDLE_CLICK");
+                        intent = new Intent(getActivity(), SearchMerchantActivity.class);
                         break;
                     case CommonTopBar.OnTitleButtonClickListener.FIRST_RIGHT_CLICK:     //顶部右侧第一个按钮的点击事件
-                        ToastUtil.showShortToast(getActivity(), "FIRST_RIGHT_CLICK");
-                        break;
-                    case CommonTopBar.OnTitleButtonClickListener.SEC_RIGHT_CLICK:   //顶部右侧第二个按钮的点击事件
-                        ToastUtil.showShortToast(getActivity(), "SEC_RIGHT_CLICK");
-                        break;
-                    case CommonTopBar.OnTitleButtonClickListener.THIR_RIGHT_CLICK:  //顶部右侧第三个按钮的点击事件
-                        ToastUtil.showShortToast(getActivity(), "THIR_RIGHT_CLICK");
+                        intent = new Intent(getActivity(), MessageActivity.class);
                         break;
                 }
+                getActivity().startActivity(intent);
             }
         });
     }

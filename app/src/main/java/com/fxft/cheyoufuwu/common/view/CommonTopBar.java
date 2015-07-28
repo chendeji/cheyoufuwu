@@ -243,6 +243,10 @@ public class CommonTopBar extends RelativeLayout implements View.OnClickListener
         initEvent();
     }
 
+    public View getMiddleCustomLayout(int resourceID){
+        return mMiddleCustomLayoutHolder.findViewById(resourceID);
+    }
+
     private void initEvent() {
         mLeftButtonLayoutHolder.setOnClickListener(this);
         mRightFirButtonLayoutHolder.setOnClickListener(this);

@@ -1,4 +1,4 @@
-package com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.task;
+package com.fxft.cheyoufuwu.ui.homePage.task;
 
 import android.content.Context;
 import android.text.TextUtils;

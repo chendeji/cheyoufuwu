@@ -39,12 +39,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.homePage.activity.choose_city.ChooseCityActivity"
+            android:name=".ui.homePage.activity.ChooseCityActivity"
             android:label="@string/title_activity_choose_city" >
         </activity>
         <activity
             android:name=".ui.homePage.activity.CarWashActivity"
             android:label="@string/title_activity_car_wash" >
+            android:name=".ui.homePage.activity.SearchMerchantActivity"
+            android:label="@string/title_activity_search_merchant" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.MessageActivity"
+            android:label="@string/title_activity_message" >
         </activity>
     </application>
 

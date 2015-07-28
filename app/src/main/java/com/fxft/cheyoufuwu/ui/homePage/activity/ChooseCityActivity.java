@@ -1,4 +1,4 @@
-package com.fxft.cheyoufuwu.ui.homePage.activity.choose_city;
+package com.fxft.cheyoufuwu.ui.homePage.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fxft.cheyoufuwu.R;
-import com.fxft.cheyoufuwu.common.util.ChineseSpelling;
 import com.fxft.cheyoufuwu.common.view.CommonSearchLayout;
 import com.fxft.cheyoufuwu.common.view.CommonTopBar;
 import com.fxft.cheyoufuwu.common.view.SideBar;
 import com.fxft.cheyoufuwu.model.iinterface.ICity;
-import com.fxft.cheyoufuwu.ui.homePage.activity.choose_city.adapter.SortAdapter;
+import com.fxft.cheyoufuwu.ui.homePage.adapter.SortAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.iView.ICityView;
 import com.fxft.cheyoufuwu.ui.homePage.presenter.CityPresenter;
 

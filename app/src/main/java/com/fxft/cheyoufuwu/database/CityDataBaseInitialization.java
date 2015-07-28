@@ -64,9 +64,9 @@ public class CityDataBaseInitialization {
                             JSONObject areaObject = areaArray.getJSONObject(z);
                             String areaName = areaObject.getString("city");
                             city = new City();
-                            city.setCityName(cityName);
-                            city.setAllSpell(ChineseSpelling.getSelling(cityName));
-                            city.setFirstSpell(ChineseSpelling.getFirstSpelling(cityName));
+                            city.setCityName(areaName);
+                            city.setAllSpell(ChineseSpelling.getSelling(areaName));
+                            city.setFirstSpell(ChineseSpelling.getFirstSpelling(areaName));
                             cities.add(city);
                         }
                     }

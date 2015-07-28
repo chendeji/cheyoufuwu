@@ -146,6 +146,9 @@ public class UserCenterFragment extends Fragment implements IUserCenterView {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // 用户没有进行有效的设置操作，返回
+        if (resultCode == getActivity().RESULT_CANCELED) {
+            return;
+        }
         switch (requestCode) {
             case CODE_GALLERY_REQUEST:
                 cropRawPhoto(data.getData());
