@@ -60,6 +60,9 @@ public class MessageActivity extends ActionBarActivity {
         if (mAdapter.getCount() == 0) {
             lvMessageList.setVisibility(View.INVISIBLE);
             llEmptyLayout.setVisibility(View.VISIBLE);
+        } else {
+            llEmptyLayout.setVisibility(View.GONE);
+            lvMessageList.setVisibility(View.VISIBLE);
         }
         tvEmptyText.setText(getResources().getString(R.string.empty));
     }

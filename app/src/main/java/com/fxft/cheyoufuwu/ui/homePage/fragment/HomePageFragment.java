@@ -17,6 +17,7 @@ import com.fxft.cheyoufuwu.common.view.SlideShowView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollViewCallbacks;
 import com.fxft.cheyoufuwu.common.view.scrollview.ScrollState;
+import com.fxft.cheyoufuwu.ui.homePage.activity.CarRefuelActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.CarWashActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.MessageActivity;
@@ -131,9 +132,14 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
             R.id.menu_integral_exchange, R.id.menu_black_box, R.id.menu_binding})
     public void onMenuClick(View view){
         int id = view.getId();
+        Intent intent = null;
         switch (id){
             case R.id.menu_wash_car:
-                Intent intent = new Intent(getActivity(), CarWashActivity.class);
+                intent = new Intent(getActivity(), CarWashActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_car_refuel:
+                intent = new Intent(getActivity(), CarRefuelActivity.class);
                 getActivity().startActivity(intent);
                 break;
         }
@@ -216,11 +222,6 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
         }
         mHomeNearbyMerchant.setAdapter(mNearMerchantAdapter);
 
-        //猜你喜欢列表适配
-//        if (mGuessListAdapter == null) {
-//            mGuessListAdapter = new GuessLikeListAdapter(getActivity());
-//        }
-//        mGuessList.setAdapter(mGuessListAdapter);
         ViewHelper.setAlpha(mOverlayView, 0.0f);
     }
 

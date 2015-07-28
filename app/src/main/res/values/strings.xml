@@ -81,4 +81,13 @@
         <item>@string/comment</item>
         <item>@string/sell_count</item>
     </string-array>
+    <string name="title_activity_car_refuel">CarRefuelActivity</string>
+    <string name="refuel_card">加油卡</string>
+    <string name="my_rebate">我的返利(元)</string>
+    <string name="add_rebate">添加返利</string>
+    <string name="nearby_refuel_station">附近加油站</string>
+    <string name="more_refuel_station"><![CDATA[更多>>]]></string>
+    <string name="nomore_refuel_station_nearly">附近暂无加油站</string>
+    <string name="title_activity_binding_refuel_card">BindingRefuelCard</string>
+    <string name="binding_refuel_card">绑定加油卡</string>
 </resources>
