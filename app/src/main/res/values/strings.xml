@@ -43,4 +43,5 @@
     <string name="time_out">服务器超时</string>
     <string name="data_search_result_nothing">数据库中没有该项数据</string>
     <string name="exit">再按一次退出程序</string>
+    <string name="title_activity_car_wash">洗车</string>
 </resources>

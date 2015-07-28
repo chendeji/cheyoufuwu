@@ -42,6 +42,10 @@
             android:name=".ui.homePage.activity.choose_city.ChooseCityActivity"
             android:label="@string/title_activity_choose_city" >
         </activity>
+        <activity
+            android:name=".ui.homePage.activity.CarWashActivity"
+            android:label="@string/title_activity_car_wash" >
+        </activity>
     </application>
 
 </manifest>
