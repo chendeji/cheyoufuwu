@@ -40,4 +40,10 @@ public interface IMerchandise {
      * @return
      */
     String getDistance();
+
+    /**
+     * 获取商品的评分
+     * @return
+     */
+    int getCommentValue();
 }

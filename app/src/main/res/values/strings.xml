@@ -9,7 +9,7 @@
     <string name="decovery">发现</string>
     <string name="mine">我的</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="clean_car">洗车</string>
     <string name="clean_car_detail">洗车优惠5元起</string>
@@ -53,4 +53,32 @@
     <string name="clear">清空</string>
     <string name="empty">抱歉，没有找到相关数据</string>
     <string name="no_message">亲，暂无消息哦</string>
+    <string name="near">附近</string>
+    <string name="distance_5km">5km</string>
+    <string name="distance_10km">10km</string>
+
+    <string name="all_car_type">全部</string>
+    <string name="car">小轿车</string>
+    <string name="SUV">suv</string>
+    <string name="other">其他</string>
+    <string name="price_low">价格最低</string>
+    <string name="comment">评分最高</string>
+    <string name="sell_count">销量最高</string>
+
+    <string-array name="distance_mode">
+        <item>@string/near</item>
+        <item>@string/distance_5km</item>
+        <item>@string/distance_10km</item>
+    </string-array>
+    <string-array name="car_type">
+        <item>@string/all_car_type</item>
+        <item>@string/car</item>
+        <item>@string/SUV</item>
+        <item>@string/other</item>
+    </string-array>
+    <string-array name="sort_type">
+        <item>@string/price_low</item>
+        <item>@string/comment</item>
+        <item>@string/sell_count</item>
+    </string-array>
 </resources>

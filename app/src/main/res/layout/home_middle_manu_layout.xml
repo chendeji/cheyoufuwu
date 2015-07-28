@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView
-            android:id="@+id/menu_clean_car"
+            android:id="@+id/menu_wash_car"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

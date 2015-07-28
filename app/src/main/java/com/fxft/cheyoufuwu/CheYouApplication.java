@@ -28,8 +28,8 @@ public class CheYouApplication extends Application {
         JodaTimeAndroid.init(this);
 
         //初始化未捕获异常
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(this);
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(this);
 
         //初始化数据，第一次初始化会带有耗时操作，放入到子线程中执行
         Executors.newSingleThreadExecutor().execute(new Runnable() {

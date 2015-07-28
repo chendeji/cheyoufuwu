@@ -54,4 +54,9 @@ public class Merchandise implements IMerchandise {
     public String getDistance() {
         return StringFormatUtil.afterDecimalTwo(this.distance / 1000);
     }
+
+    @Override
+    public int getCommentValue() {
+        return 0;
+    }
 }

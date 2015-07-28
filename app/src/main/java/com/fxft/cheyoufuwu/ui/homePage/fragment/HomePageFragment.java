@@ -12,23 +12,25 @@ import android.view.ViewGroup;
 import com.fxft.cheyoufuwu.R;
 import com.fxft.cheyoufuwu.common.interfase.IBaseView;
 import com.fxft.cheyoufuwu.common.util.SystemUtil;
-import com.fxft.cheyoufuwu.common.util.ToastUtil;
 import com.fxft.cheyoufuwu.common.view.CommonTopBar;
 import com.fxft.cheyoufuwu.common.view.SlideShowView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollViewCallbacks;
 import com.fxft.cheyoufuwu.common.view.scrollview.ScrollState;
+import com.fxft.cheyoufuwu.ui.homePage.activity.CarWashActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.MessageActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.SearchMerchantActivity;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.NearByMerchantAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.TopADPagerAdapter;
+import com.fxft.cheyoufuwu.ui.homePage.customview.MenuItemView;
 import com.fxft.cheyoufuwu.ui.homePage.iView.IHomeView;
 import com.fxft.cheyoufuwu.ui.homePage.presenter.HomePresenter;
 import com.nineoldandroids.view.ViewHelper;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,6 +57,23 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
 
     @Bind(R.id.ctb_homepage_top_bar)
     CommonTopBar mHomepageTopBar;   //顶部的TitleView
+
+    @Bind(R.id.menu_wash_car)
+    MenuItemView menuWashCar;
+    @Bind(R.id.menu_car_refuel)
+    MenuItemView menuCarRefuel;
+    @Bind(R.id.menu_car_maintain)
+    MenuItemView menuCarMaintain;
+    @Bind(R.id.menu_car_sos)
+    MenuItemView menuCarSos;
+    @Bind(R.id.menu_illegal_query)
+    MenuItemView menuIllegalQuery;
+    @Bind(R.id.menu_integral_exchange)
+    MenuItemView menuIntegralExchange;
+    @Bind(R.id.menu_black_box)
+    MenuItemView menuBlackBox;
+    @Bind(R.id.menu_binding)
+    MenuItemView menuBinding;
     private int imageSpaceHeight;   //顶部滚动广告控件的高度
     private int actionBarSize;
 
@@ -105,6 +124,19 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
         //初始化一些控件
         initComponent();
         initEvent();
+    }
+
+    @OnClick(value = {R.id.menu_wash_car, R.id.menu_car_refuel,
+            R.id.menu_car_maintain, R.id.menu_car_sos, R.id.menu_illegal_query,
+            R.id.menu_integral_exchange, R.id.menu_black_box, R.id.menu_binding})
+    public void onMenuClick(View view){
+        int id = view.getId();
+        switch (id){
+            case R.id.menu_wash_car:
+                Intent intent = new Intent(getActivity(), CarWashActivity.class);
+                getActivity().startActivity(intent);
+                break;
+        }
     }
 
     /**

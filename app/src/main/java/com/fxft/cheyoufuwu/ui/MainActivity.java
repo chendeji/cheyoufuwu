@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Fragment lastShowFragment;  //上一次显示的fragment
     private Fragment currentShowFragment; //当前需要显示的fragment
     private boolean isBackClicked;
+    private long mLastClickBackButtonTime;  //上一次点击返回键的时间
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,10 +132,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goback() {
-        if (isBackClicked){
+        long currentTime = System.currentTimeMillis();
+        long detal = currentTime - mLastClickBackButtonTime;
+        if (isBackClicked && detal < 300){
             android.os.Process.killProcess(android.os.Process.myPid());
         } else {
             isBackClicked = true;
+            mLastClickBackButtonTime = currentTime;
             ToastUtil.showShortToast(this, getResources().getString(R.string.exit));
         }
     }
