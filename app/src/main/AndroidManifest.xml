@@ -59,8 +59,37 @@
             android:label="@string/title_activity_binding_refuel_card" >
         </activity>
         <activity
-            android:name=".ui.homePage.activity.BindingInfoActivity"
+            android:name=".ui.homePage.activity.BindingInfoInputActivity"
             android:label="@string/title_activity_binding_info" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.CarMaintainActivity"
+            android:label="@string/title_activity_car_maintain" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.RescueActivity"
+            android:label="@string/title_activity_sos" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.AddCarActivity"
+            android:label="@string/title_activity_add_car"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.IllegalActivity"
+            android:label="@string/title_activity_illegal" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.IntegralExchangeActivity"
+            android:label="@string/title_activity_integral_exchange" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.BindingActivateActivity"
+            android:label="@string/title_activity_binding" >
+        </activity>
+        <activity
+            android:name=".ui.homePage.activity.BlackBoxActivity"
+            android:label="@string/title_activity_black_box" >
         </activity>
     </application>
 

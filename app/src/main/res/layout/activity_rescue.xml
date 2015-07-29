@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_rescue_service_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:left_bg="@drawable/common_bg_top_back"
+        app:left_layout_enable="true"
+        app:title_enable="true"
+        app:title_text="@string/sos_service"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_add_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:src="@drawable/wb_add_car" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:gravity="center_horizontal"
+            android:text="@string/add_car" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/light_gray" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:minHeight="125.0dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sos_tuoche"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_tuoche" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="需要拖车"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/light_gray" />
+
+            <LinearLayout
+                android:id="@+id/sos_meiyou"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_meiyou" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="没油"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:minHeight="125.0dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sos_baotai"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_baotai" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="爆胎"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/light_gray" />
+
+            <LinearLayout
+                android:id="@+id/sos_beikun"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_beikun" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="被困"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:minHeight="125.0dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sos_quedian"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_quedian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="缺电"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:background="@color/light_gray" />
+
+            <LinearLayout
+                android:id="@+id/sos_qita"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="65.0dip"
+                    android:layout_height="65.0dip"
+                    android:src="@drawable/sos_qita" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="其他救援"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+

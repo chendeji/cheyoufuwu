@@ -22,7 +22,7 @@ public class BindingRefuelCardActiivty extends ActionBarActivity {
     @Bind(R.id.ctb_binding_car_top_bar)
     CommonTopBar ctbBindingCarTopBar;
 
-    private int mCurrentBindingMode = BindingInfoActivity.PERSONAL_BINDING;
+    private int mCurrentBindingMode = BindingInfoInputActivity.PERSONAL_BINDING;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +46,14 @@ public class BindingRefuelCardActiivty extends ActionBarActivity {
     public void onBindingClick(View view) {
         switch (view.getId()){
             case R.id.tv_personal_binding:
-                mCurrentBindingMode = BindingInfoActivity.PERSONAL_BINDING;
+                mCurrentBindingMode = BindingInfoInputActivity.PERSONAL_BINDING;
                 break;
             case R.id.tv_company_binding:
-                mCurrentBindingMode = BindingInfoActivity.COMPANY_BINDING;
+                mCurrentBindingMode = BindingInfoInputActivity.COMPANY_BINDING;
                 break;
         }
-        Intent intent = new Intent(this, BindingInfoActivity.class);
-        intent.putExtra(BindingInfoActivity.BINDING_MODE, mCurrentBindingMode);
+        Intent intent = new Intent(this, BindingInfoInputActivity.class);
+        intent.putExtra(BindingInfoInputActivity.BINDING_MODE, mCurrentBindingMode);
         startActivity(intent);
     }
 

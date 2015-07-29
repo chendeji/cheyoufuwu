@@ -17,10 +17,16 @@ import com.fxft.cheyoufuwu.common.view.SlideShowView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollViewCallbacks;
 import com.fxft.cheyoufuwu.common.view.scrollview.ScrollState;
+import com.fxft.cheyoufuwu.ui.homePage.activity.BindingActivateActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.BlackBoxActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.CarMaintainActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.CarRefuelActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.CarWashActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.ChooseCityActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.IllegalActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.IntegralExchangeActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.MessageActivity;
+import com.fxft.cheyoufuwu.ui.homePage.activity.RescueActivity;
 import com.fxft.cheyoufuwu.ui.homePage.activity.SearchMerchantActivity;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.NearByMerchantAdapter;
 import com.fxft.cheyoufuwu.ui.homePage.adapter.TopADPagerAdapter;
@@ -140,6 +146,30 @@ public class HomePageFragment extends Fragment implements IHomeView, IBaseView {
                 break;
             case R.id.menu_car_refuel:
                 intent = new Intent(getActivity(), CarRefuelActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_car_maintain:
+                intent = new Intent(getActivity(), CarMaintainActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_car_sos:
+                intent = new Intent(getActivity(), RescueActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_illegal_query:
+                intent = new Intent(getActivity(), IllegalActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_integral_exchange:
+                intent = new Intent(getActivity(), IntegralExchangeActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_binding:
+                intent = new Intent(getActivity(), BindingActivateActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.menu_black_box:
+                intent = new Intent(getActivity(), BlackBoxActivity.class);
                 getActivity().startActivity(intent);
                 break;
         }

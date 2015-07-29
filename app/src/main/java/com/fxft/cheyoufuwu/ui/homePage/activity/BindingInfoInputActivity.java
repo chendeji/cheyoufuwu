@@ -12,7 +12,7 @@ import com.fxft.cheyoufuwu.common.view.CommonTopBar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class BindingInfoActivity extends AppCompatActivity {
+public class BindingInfoInputActivity extends AppCompatActivity {
 
     public static final String BINDING_MODE = "binding_mode";
 

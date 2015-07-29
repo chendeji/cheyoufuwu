@@ -46,4 +46,5 @@ public interface IMerchandise {
      * @return
      */
     int getCommentValue();
+
 }

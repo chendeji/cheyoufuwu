@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.fxft.cheyoufuwu.R;
 
-
 /**
  * 支持所有位置的自定义布局，默认可以只显示图片，支持点击事件
  */

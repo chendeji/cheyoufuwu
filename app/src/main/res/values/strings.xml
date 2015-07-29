@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">车友服务</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="search_merchant">寻找商家、商品</string>
     <string name="home_page">首页</string>
     <string name="mall">商城</string>
@@ -56,8 +54,9 @@
     <string name="near">附近</string>
     <string name="distance_5km">5km</string>
     <string name="distance_10km">10km</string>
+    <string name="distance_15km">15km</string>
 
-    <string name="all_car_type">全部</string>
+    <string name="all">全部</string>
     <string name="car">小轿车</string>
     <string name="SUV">suv</string>
     <string name="other">其他</string>
@@ -69,9 +68,10 @@
         <item>@string/near</item>
         <item>@string/distance_5km</item>
         <item>@string/distance_10km</item>
+        <item>@string/distance_15km</item>
     </string-array>
     <string-array name="car_type">
-        <item>@string/all_car_type</item>
+        <item>@string/all</item>
         <item>@string/car</item>
         <item>@string/SUV</item>
         <item>@string/other</item>
@@ -81,6 +81,20 @@
         <item>@string/comment</item>
         <item>@string/sell_count</item>
     </string-array>
+
+    <string-array name="car_beauty">
+        <item>@string/all</item>
+        <item>@string/maintenance_guarantee</item>
+        <item>@string/wash_car</item>
+        <item>@string/car_beauty</item>
+    </string-array>
+
+    <string-array name="intelligence_sort_type">
+        <item>@string/distance_to_far</item>
+        <item>@string/comment_from_high_to_low</item>
+        <item>@string/sell_count_from_high_to_low</item>
+    </string-array>
+
     <string name="title_activity_car_refuel">CarRefuelActivity</string>
     <string name="refuel_card">加油卡</string>
     <string name="my_rebate">我的返利(元)</string>
@@ -98,4 +112,63 @@
     <string name="real_name_authentication">实名认证信息</string>
     <string name="input_IDCard_name">请输入身份证姓名</string>
     <string name="input_IDCard_number">请输入身份证号码</string>
+    <string name="title_activity_car_maintain">CarMaintainActivity</string>
+    <string name="merchant_4s">4s商家</string>
+    <string name="all_merchants">全部商家</string>
+    <string name="action_settings">设置</string>
+    <string name="maintenance_guarantee">维保</string>
+    <string name="wash_car">洗车</string>
+    <string name="car_beauty">美容</string>
+    <string name="distance_to_far">距离从近到远</string>
+    <string name="comment_from_high_to_low">好评从高到低</string>
+    <string name="sell_count_from_high_to_low">销量从高到低</string>
+    <string name="title_activity_sos">SOSActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="sos_service">救援服务</string>
+    <string name="add_car">添加车辆</string>
+    <string name="title_activity_add_car">AddCarActivity</string>
+    <string name="add_car_info">添加车辆信息</string>
+    <string name="car_brand">*车型</string>
+    <string name="please_select">请选择</string>
+    <string name="car_license_plate_number">*车牌号</string>
+    <string name="car_frame_number">*车架号</string>
+    <string name="car_engine_number">*发动机号</string>
+    <string name="please_input_license_number">请输入车牌号</string>
+    <string name="please_input_frame_number">请输入车架号</string>
+    <string name="please_input_engine_number">请输入发动机号后六位</string>
+    <string name="mileage">当前里程（公里）</string>
+    <string name="please_input_current_mileage_number">请输入当前里程</string>
+    <string name="next_maintenance_time">下次保养时间</string>
+    <string name="choose_maintenance_time">请选择下次保养时间</string>
+    <string name="save">保存</string>
+    <string name="title_activity_illegal">IllegalActivity</string>
+    <string name="illegal">违章查询</string>
+    <string name="title_activity_integral_exchange">IntegralExchangeActivity</string>
+    <string name="liantong_integral_exchange">联通积分兑换</string>
+    <string name="input_exchange_integral">请输入需要兑换的联通积分</string>
+    <string name="support_integral_type">目前仅支持 100,500,1000,2000,5000,10000积分几种</string>
+    <string name="submit_intergral">确认兑换金额</string>
+    <string name="title_activity_binding">BindingActivity</string>
+    <string name="cheyou_activate">车友服务激活</string>
+    <string name="black_box_binding">黑匣子绑定</string>
+    <string name="rescul_car_binding">救援车辆绑定</string>
+    <string name="wash_card_binding">洗车卡绑定</string>
+    <string name="title_activity_black_box">BlackBoxActivity</string>
+    <string name="car_listence_number">苏A 546HS</string>
+    <string name="car_check">汽车体检</string>
+    <string name="health_record">健康档案</string>
+    <string name="drive_report">行车日报</string>
+    <string name="lasttime_schedule">上次行程</string>
+    <string name="car_bodyguard">爱车保镖</string>
+    <string name="master_help">专家平台</string>
+    <string name="check_notice">保养提醒</string>
+    <string name="safe_friend">平安亲友</string>
+    <string name="free_check">免费检查</string>
+    <string name="car_position">爱车位置</string>
+    <string name="drive_mileage">上次行驶里程：0.0km</string>
+    <string name="drive_hource">上次行驶时长：0分钟</string>
+    <string name="lastday_mileage">昨日行驶里程：0.0km</string>
+    <string name="lastday_score_times">昨日行程次数：0次</string>
+    <string name="last_day_break_time">昨日急刹车次数：0次</string>
 </resources>

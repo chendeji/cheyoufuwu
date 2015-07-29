@@ -2,6 +2,7 @@ package com.fxft.cheyoufuwu.ui.homePage.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import butterknife.OnClick;
 
 public class CarWashActivity extends AppCompatActivity implements IWashCarView, View.OnClickListener {
 
+    //顶部三个选项
     private static final int DISTANCE_SEARCH_MODE = 1;
     private static final int CARTYPE_SEARCH_MODE = 2;
     private static final int SORTTYPE_SEARCH_MODE = 3;
@@ -85,7 +87,7 @@ public class CarWashActivity extends AppCompatActivity implements IWashCarView, 
         lvMerchantItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                //TODO 跳到商户详情页面
             }
         });
         ctbCarWashTopBar.setOnTitleButtonClickListener(new CommonTopBar.OnTitleButtonClickListener() {
@@ -97,7 +99,6 @@ public class CarWashActivity extends AppCompatActivity implements IWashCarView, 
                         finish();
                         break;
                     case FIRST_RIGHT_CLICK:
-                        //TODO 搜索
                         intent = new Intent(CarWashActivity.this, SearchMerchantActivity.class);
                         startActivity(intent);
                         break;
@@ -162,6 +163,7 @@ public class CarWashActivity extends AppCompatActivity implements IWashCarView, 
         //显示PopupWindow
         if (pop == null) {
             pop = new PopupWindow(popView, popWindowWidth, ViewGroup.LayoutParams.WRAP_CONTENT);
+            pop.setBackgroundDrawable(new BitmapDrawable());
         }
         pop.setOutsideTouchable(true);
         if (!pop.isShowing()) {

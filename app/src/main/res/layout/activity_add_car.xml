@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.AddCarActivity">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_binding_info_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:left_bg="@drawable/common_bg_top_back"
+        app:left_layout_enable="true"
+        app:title_enable="true"
+        app:title_text="@string/add_car_info"
+        app:title_text_color="@color/black"
+        app:title_text_size="@dimen/middle_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_gray_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/iv_car_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_10dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/car_photo_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/car_brand"
+                    android:textColor="@color/light_red" />
+
+                <TextView
+                    android:id="@+id/tv_select_car_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/please_select" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/car_license_plate_number"
+                    android:textColor="@color/light_red" />
+
+                <EditText
+                    android:id="@+id/et_license_plate_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/please_input_license_number"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/car_frame_number"
+                    android:textColor="@color/light_red" />
+
+                <EditText
+                    android:id="@+id/et_frame_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/please_input_frame_number"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/car_engine_number"
+                    android:textColor="@color/light_red" />
+
+                <EditText
+                    android:id="@+id/et_engine_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/please_input_engine_number"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/mileage"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/et_mileage_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/please_input_current_mileage_number"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/default_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/next_maintenance_time"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/_choose_next_maintenance_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/choose_maintenance_time" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_gray_line" />
+
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/common_red_radius_button_bg"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:text="@string/save"
+                android:textSize="@dimen/huge_text_size" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

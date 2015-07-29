@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fxft.cheyoufuwu.ui.homePage.activity.CarMaintainActivity">
+
+    <com.fxft.cheyoufuwu.common.view.CommonTopBar
+        android:id="@+id/ctb_car_maintian_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:left_bg="@drawable/common_bg_top_back"
+        app:left_layout_enable="true"
+        app:middle_custom_layout="@layout/car_maintain_top_bar_custom_layout"
+        app:middle_custom_layout_enable="true"
+        app:right_bg1="@drawable/car_store_map_bg"
+        app:right_first_layout_enable="true"
+        app:title_enable="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_gray_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_distance_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_10dp">
+
+            <TextView
+                android:id="@+id/tv_distance_mode_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/arrow_down" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/home_gray_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_car_beauty_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_10dp">
+
+            <TextView
+                android:id="@+id/tv_car_beauty_mode_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/arrow_down" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/home_gray_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_sort_type_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_10dp">
+
+            <TextView
+                android:id="@+id/tv_sort_mode_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/arrow_down" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_gray_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/common_list_empty_layout" />
+
+        <ListView
+            android:id="@+id/lv_merchant_list"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</LinearLayout>

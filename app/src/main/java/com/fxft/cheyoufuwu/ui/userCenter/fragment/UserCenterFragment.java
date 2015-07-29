@@ -24,10 +24,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.fxft.cheyoufuwu.R;
+import com.fxft.cheyoufuwu.common.util.HeadImageUtil;
 import com.fxft.cheyoufuwu.common.util.SystemUtil;
 import com.fxft.cheyoufuwu.common.util.ToastUtil;
 import com.fxft.cheyoufuwu.common.view.CommonTopBar;
 import com.fxft.cheyoufuwu.common.view.scrollview.ObservableScrollView;
+import com.fxft.cheyoufuwu.ui.common.view.ChoosePictureDialog;
 import com.fxft.cheyoufuwu.ui.userCenter.iView.IUserCenterView;
 import com.fxft.cheyoufuwu.ui.userCenter.presenter.UserCenterPresenter;
 
@@ -44,18 +46,7 @@ import butterknife.ButterKnife;
  * Use the {@link UserCenterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UserCenterFragment extends Fragment implements IUserCenterView {
-
-    /* 请求识别码 */
-    private static final int CODE_GALLERY_REQUEST = 0xa0;
-    private static final int CODE_CAMERA_REQUEST = 0xa1;
-    private static final int CODE_RESULT_REQUEST = 0xa2;
-    /* 头像文件 */
-    private static final String IMAGE_FILE_NAME = "temp_head_image.jpg";
-
-    // 裁剪后图片的宽(X)和高(Y),480 X 480的正方形。
-    private static int output_X = 480;
-    private static int output_Y = 480;
+public class UserCenterFragment extends Fragment implements IUserCenterView, HeadImageUtil.OnImageSuccessListener {
 
     @Bind(R.id.ctb_usercenter_top_bar)
     CommonTopBar mUsercenterTopBar;
@@ -142,102 +133,21 @@ public class UserCenterFragment extends Fragment implements IUserCenterView {
         });
     }
 
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // 用户没有进行有效的设置操作，返回
-        if (resultCode == getActivity().RESULT_CANCELED) {
-            return;
-        }
-        switch (requestCode) {
-            case CODE_GALLERY_REQUEST:
-                cropRawPhoto(data.getData());
-                break;
-
-            case CODE_CAMERA_REQUEST:
-                if (SystemUtil.hasSdcard()) {
-                    File tempFile = new File(
-                            Environment.getExternalStorageDirectory(),
-                            IMAGE_FILE_NAME);
-                    cropRawPhoto(Uri.fromFile(tempFile));
-                }
-                break;
-
-            case CODE_RESULT_REQUEST:
-                if (data != null) {
-                    setImageToHeadView(data);
-                }
-                break;
-        }
+        HeadImageUtil.onActivityResult(getActivity(), requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    /**
-     * 到本地相册选取图片
-     */
-    private void choseHeadImageFromGallery() {
-        Intent intentFromGallery = new Intent();
-        // 设置文件类型
-        intentFromGallery.setType("image/*");
-        intentFromGallery.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intentFromGallery, CODE_GALLERY_REQUEST);
-    }
-
-    /**
-     * Chose head image from camera capture.
-     */
-    private void choseHeadImageFromCameraCapture() {
-        Intent intentFromCapture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        // 判断存储卡是否可用，存储照片文件
-        if (SystemUtil.hasSdcard()) {
-            intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT, Uri
-                    .fromFile(new File(Environment
-                            .getExternalStorageDirectory(), IMAGE_FILE_NAME)));
-        }
-
-        startActivityForResult(intentFromCapture, CODE_CAMERA_REQUEST);
-    }
-
-
-    /**
-     * 裁剪原始的图片
-     */
-    public void cropRawPhoto(Uri uri) {
-
-        Intent intent = new Intent("com.android.camera.action.CROP");
-        intent.setDataAndType(uri, "image/*");
-
-        // 设置裁剪
-        intent.putExtra("crop", "true");
-
-        // aspectX , aspectY :宽高的比例
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
-
-        // outputX , outputY : 裁剪图片宽高
-        intent.putExtra("outputX", output_X);
-        intent.putExtra("outputY", output_Y);
-        intent.putExtra("return-data", true);
-
-        startActivityForResult(intent, CODE_RESULT_REQUEST);
-    }
-
-    /**
-     * 提取保存裁剪之后的图片数据，并设置头像部分的View
-     */
-    private void setImageToHeadView(Intent intent) {
-        Bundle extras = intent.getExtras();
-        if (extras != null) {
-            final Bitmap photo = extras.getParcelable("data");
-            ivUserHeadimage.post(new Runnable() {
-                @Override
-                public void run() {
-                    ivUserHeadimage.setImageBitmap(photo);
-                }
-            });
-
-        }
+    @Override
+    public void onGetPhoto(final Bitmap photo) {
+        ivUserHeadimage.post(new Runnable() {
+            @Override
+            public void run() {
+                ivUserHeadimage.setImageBitmap(photo);
+            }
+        });
     }
 
     /**
@@ -250,69 +160,11 @@ public class UserCenterFragment extends Fragment implements IUserCenterView {
         mChoosePicturedialog.show();
     }
 
-    public class ChoosePictureDialog extends Dialog implements DialogInterface.OnDismissListener {
-
-        @Bind(R.id.bt_choose_picture_from_gallary)
-        Button btChoosePictureFromGallary;
-        @Bind(R.id.bt_choose_picture_camera)
-        Button btChoosePictureCamera;
-        @Bind(R.id.bt_cancle)
-        Button btCancle;
-
-        public ChoosePictureDialog(Context context, int theme) {
-            super(context, theme);
-        }
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            setContentView(R.layout.usercenter_choose_picture_dialog_layout);
-            ButterKnife.bind(this);
-            // 设置对话框横向充满，垂直自适应并居中
-            Window mWindow = this.getWindow();
-            mWindow.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            mWindow.setGravity(Gravity.BOTTOM | Gravity.CENTER_VERTICAL);
-
-            initEvent();
-            super.onCreate(savedInstanceState);
-        }
-
-        private void initEvent() {
-            setOnDismissListener(this);
-            btChoosePictureFromGallary.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //从相册选取图片
-                    choseHeadImageFromGallery();
-                    dismiss();
-                }
-            });
-            btChoosePictureCamera.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //相机拍照
-                    choseHeadImageFromCameraCapture();
-                    dismiss();
-                }
-            });
-            btCancle.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dismiss();
-                }
-            });
-        }
-
-        @Override
-        public void onDismiss(DialogInterface dialog) {
-            ButterKnife.unbind(this);
-        }
-    }
-
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         userPresenter = new UserCenterPresenter(this);
+        HeadImageUtil.setOnImageSuccessListener(this);
 //        try {
 //            mListener = (OnUserCenterFragmentInteractionListener) activity;
 //        } catch (ClassCastException e) {
@@ -332,6 +184,7 @@ public class UserCenterFragment extends Fragment implements IUserCenterView {
         super.onDetach();
         mListener = null;
         userPresenter.onDestory();
+        HeadImageUtil.setOnImageSuccessListener(null);
     }
 
     @Override

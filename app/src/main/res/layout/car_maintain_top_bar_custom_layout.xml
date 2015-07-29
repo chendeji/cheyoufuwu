@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_check_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/view_divider"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_10dp">
+
+    <RadioButton
+        android:id="@+id/rb_4s_merchants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/horizontal_check_button_bg"
+        android:button="@null"
+        android:checked="true"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:text="@string/merchant_4s"
+        android:textColor="@drawable/horizontal_check_button_text_color_pressed"
+        android:textSize="@dimen/middle_text_size" />
+
+    <RadioButton
+        android:id="@+id/rb_all_merchants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/horizontal_check_button_bg"
+        android:button="@null"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:text="@string/all_merchants"
+        android:textColor="@drawable/horizontal_check_button_text_color_pressed"
+        android:textSize="@dimen/middle_text_size" />
+
+</RadioGroup>
